@@ -9,6 +9,16 @@
 
 function lastCharacter(str) {
   // Your code here
+  if (typeof str === 'string' && str.length > 0) {
+    return str[str.length - 1];
+  // } 
+  // else if (str = '') {
+  //   return undefined
+  // } else if (typeof str == 'number') {
+  //   return undefined
+  } else {
+    return undefined;
+  }
 }
 
 // Step 2
@@ -16,6 +26,10 @@ function lastCharacter(str) {
 // conditions specified above (don't forget empty string and number!!)
 
 expect(lastCharacter('max'), 'x');
+expect(lastCharacter(''), undefined);
+expect(lastCharacter(4), undefined);
+expect(lastCharacter(), undefined);
+expect(lastCharacter(Infinity), undefined);
 
 // Add 4 more test cases here!
 // 🌠 NOTE 🌠

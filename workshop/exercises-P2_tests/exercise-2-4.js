@@ -11,11 +11,22 @@
 
 function getLetterAtIndex(str, index) {
   // Your code here
+  if (str.length >= index && typeof str === 'string') {
+    return str.charAt(index);
+  } else {
+    return undefined;
+  }
 }
 
 // Add 6 more test cases
 expect(getLetterAtIndex('hello', 4), 'o');
 expect(getLetterAtIndex('goodbye', 0), 'g');
+expect(getLetterAtIndex(44, 1), undefined);
+expect(getLetterAtIndex(Infinity, 2), undefined);
+expect(getLetterAtIndex('', 1), undefined);
+expect(getLetterAtIndex('bacon', 10), undefined);
+expect(getLetterAtIndex('123456', 5), '6');
+expect(getLetterAtIndex('nothing', ''), 'n');
 
 /**
  * -------------------------------------------------------------------

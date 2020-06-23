@@ -8,6 +8,11 @@
 
 function firstLetter(str) {
   // Your code here
+  if (str.length > 0) {
+    return str.charAt(0);
+  } else {
+    return undefined;
+  }
 }
 
 // Step 2

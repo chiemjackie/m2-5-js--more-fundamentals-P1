@@ -13,10 +13,27 @@
 
 function repeat(arr) {
   // Your code here
+  if (arr[1] <= 0) {
+    return '';
+  }
+  if (typeof arr[0] === 'string' && typeof arr[1] === 'number') {
+    return arr[0].repeat(arr[1]);
+  } else {
+    return undefined
+  }
 }
 
 // We need 7 test cases.
 // Don't forget to test all of the question parameters
+expect(repeat(["foo", 3]), 'foofoofoo')
+expect(repeat(["f", 10]), 'ffffffffff')
+expect(repeat(["", 3]), '')
+expect(repeat([3, 3]), undefined)
+expect(repeat(["foo", -1]), '')
+expect(repeat(["foo", 0]), '')
+expect(repeat(["foo", "foo"]), undefined)
+expect(repeat(["foo",]), undefined)
+// expect(repeat(["foo", Infinity]),) // Bricks the program
 
 /**
  * -------------------------------------------------------------------

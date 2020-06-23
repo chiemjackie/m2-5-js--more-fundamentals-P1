@@ -161,6 +161,7 @@ function getLetterGrade(score) {
     return "B"
   } else {
     return "A";
+  // MISSING CURLY BRACKET
 }
 
 function expect(result, value) {
@@ -181,6 +182,7 @@ expect(getLetterGrade(62), "C");
 // Exercise 2
 function doesNameStartWithLetter(name, letter) {
   let firstLetter = name[0];
+  // Need ===, not = below
   if ((firstLetter = letter)) {
     return true;
   } else {
